@@ -1,0 +1,88 @@
+ .toolView {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+
+ .overlay {
+     display: none;
+     background-color: red;
+     position: fixed;
+     width: 100vw;
+     height: 100vh;
+     top: 0;
+     left: 0;
+     background-color: rgba(0, 0, 0, 0.5);
+     z-index: 2;
+ }
+
+ .open-button {
+     background-color: #555;
+     color: white;
+     padding: 16px 20px;
+     border: none;
+     cursor: pointer;
+     opacity: 0.8;
+     position: fixed;
+     bottom: 23px;
+     right: 28px;
+     width: 280px;
+ }
+
+ .form-popup {
+     display: none;
+     position: fixed;
+     right: calc(50% - 200px);
+     border: 3px solid #f1f1f1;
+     z-index: 9;
+ }
+
+ .overlay.show {
+     display: block;
+ }
+
+ .form-popup.show {
+     display: block;
+ }
+
+ .form-container {
+     max-width: 400px;
+     overflow: auto;
+     padding: 10px;
+     background-color: white;
+ }
+
+ .form-container input[type=text],
+ .form-container input[type=password] {
+     width: 100%;
+     padding: 15px;
+     margin: 5px 0 22px 0;
+     border: none;
+     background: #f1f1f1;
+ }
+
+ .form-container input[type=text]:focus,
+ .form-container input[type=password]:focus {
+     background-color: #ddd;
+     outline: none;
+ }
+
+ .form-container .btn {
+     background-color: #04AA6D;
+     color: white;
+     padding: 16px 20px;
+     border: none;
+     cursor: pointer;
+     width: 100%;
+     margin-bottom: 10px;
+     opacity: 0.8;
+ }
+
+ .form-container .cancel {
+     background-color: red;
+ }
+
+ .form-container .btn:hover,
+ .open-button:hover {
+     opacity: 1;
+ }
